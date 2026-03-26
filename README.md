@@ -3,17 +3,25 @@
 Clone da interface da Netflix desenvolvido durante a Imersão Front-End da Alura.
 
 ##  Status
-Em desenvolvimento — acompanhando as aulas da imersão.
+Em desenvolvimento — com melhorias contínuas de UX e acessibilidade.
 
-##  O que já foi feito
-- Tela de seleção de perfis
+##  ✨ Funcionalidades
+- ✅ Tela de seleção de perfis responsiva
+- ✅ **Dark/Light Mode** com toggle fixo (persistência em localStorage)
+- ✅ HTML semântico com tags `<header>`, `<section>`, `<article>`, `<figure>`
+- ✅ Design responsivo (desktop, tablet, mobile)
+- ✅ Acessibilidade (aria-labels, aria-pressed, role attributes)
 
-##  Próximas etapas
-- Em andamento conforme as aulas
+##  🎨 Dark/Light Mode
+- Botão de alternância no canto superior direito
+- Ícones: ☀️ (modo claro) / ☾ (modo escuro)
+- Preferência salva em `localStorage`
+- Detecção automática de preferência do sistema (`prefers-color-scheme`)
 
 ##  Tecnologias utilizadas
 - HTML5
 - CSS3
+- JavaScript (vanilla)
 
 
 ## 👨‍💻 Autor
