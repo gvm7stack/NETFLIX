@@ -110,6 +110,69 @@ h1 {
     }
 }
 
+/* Estilos para modo claro */
+.light-mode {
+    background-color: #f5f5f5;
+    color: #1a1a1a;
+}
+
+.light-mode .profile p {
+    color: #4a4a4a;
+}
+
+.light-mode .profile:hover img {
+    border-color: #1a1a1a;
+}
+
+.light-mode .profile:hover p {
+    color: #000000;
+}
+
+/* Estilos para modo escuro */
+.dark-mode {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.dark-mode .profile p {
+    color: #b3b3b3;
+}
+
+.dark-mode .profile:hover img {
+    border-color: #ffffff;
+}
+
+.dark-mode .profile:hover p {
+    color: #ffffff;
+}
+
+/* Ajuste no botão de alternância */
+#themeToggle {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: inherit;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 999px;
+    padding: 10px;
+    width: 44px;
+    height: 44px;
+    font-size: 1.2rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#themeToggle:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    transform: scale(1.05);
+}
+
 /* Estilos responsivos para celulares */
 @media (max-width: 480px) {
     main {

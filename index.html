@@ -8,27 +8,42 @@
 </head>
 <body>
     <main>
-        <h1>Quem está assistindo?</h1>
-        <div class="profiles">
-            <div class="profile">
-                <img src="/assets/perfil1.jpg" alt="Um cachorro vestido com uma blusa de capô e fones de ouvido, sentado em frente a um computador com múltiplas telas, um ambiente de trabalho tecnológico.">
-                <p>Gustavo </p>
-            </div>
-            <div class="profile">
-                <img src="/assets/perfil2.jpg" alt="Um cachorro com um capô e um gorro, sentado no sofá, em uma postura relaxada, com um olhar sério.">
-                <p>Rafaela</p>
-            </div>
-            <div class="profile">
-                <img src="/assets/perfil3.jpg" alt="Um homem com uma aparência séria, fumando um cigarro, com um estilo visual em preto e branco, em um ambiente urbano. ">
-                <p>Davi</p>
-            </div>
-            <div class="profile">
-                <img src="/assets/perfil4.jpg
-                " alt="Um homem vestindo um terno antigo, com um chapéu clássico, com um olhar sério e postura formal.">
-                <p>Meg</p>
-            </div>
-        </div>
-       
+        <header>
+            <h1>Quem está assistindo?</h1>
+        </header>
+
+        <section class="profiles" aria-label="Perfis de usuário">
+            <article class="profile" role="button" tabindex="0" aria-label="Perfil de Gustavo">
+                <figure>
+                    <img src="/assets/perfil1.jpg" alt="Um cachorro vestido com uma blusa de capô e fones de ouvido, sentado em frente a um computador com múltiplas telas, um ambiente de trabalho tecnológico.">
+                    <figcaption>Gustavo</figcaption>
+                </figure>
+            </article>
+
+            <article class="profile" role="button" tabindex="0" aria-label="Perfil de Rafaela">
+                <figure>
+                    <img src="/assets/perfil2.jpg" alt="Um cachorro com um capô e um gorro, sentado no sofá, em uma postura relaxada, com um olhar sério.">
+                    <figcaption>Rafaela</figcaption>
+                </figure>
+            </article>
+
+            <article class="profile" role="button" tabindex="0" aria-label="Perfil de Davi">
+                <figure>
+                    <img src="/assets/perfil3.jpg" alt="Um homem com uma aparência séria, fumando um cigarro, com um estilo visual em preto e branco, em um ambiente urbano.">
+                    <figcaption>Davi</figcaption>
+                </figure>
+            </article>
+
+            <article class="profile" role="button" tabindex="0" aria-label="Perfil de Meg">
+                <figure>
+                    <img src="/assets/perfil4.jpg" alt="Um homem vestindo um terno antigo, com um chapéu clássico, com um olhar sério e postura formal.">
+                    <figcaption>Meg</figcaption>
+                </figure>
+            </article>
+        </section>
     </main>
+
+    <button id="themeToggle" aria-label="Alternar modo claro e escuro">Modo claro</button>
+    <script src="/assets/theme.js"></script>
 </body>
 </html>
