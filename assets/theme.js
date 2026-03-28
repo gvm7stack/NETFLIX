@@ -23,6 +23,14 @@ themeToggle.addEventListener('click', () => {
     setTheme(currentTheme === 'light' ? 'dark' : 'light');
 });
 
+// Navbar scroll effect
+window.addEventListener('scroll', () => {
+    const navbar = document.querySelector('.navbar');
+    if (navbar) {
+        navbar.classList.toggle('scrolled', window.scrollY > 50);
+    }
+});
+
 const savedTheme = localStorage.getItem('netflixTheme');
 const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 setTheme(savedTheme || (prefersDark ? 'dark' : 'light'));

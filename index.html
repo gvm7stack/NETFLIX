@@ -4,46 +4,109 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Netflix</title>
-    <link rel="stylesheet" href="/assets/styles.css">
+    <link rel="stylesheet" href="assets/styles.css">
 </head>
-<body>
-    <main>
-        <header>
-            <h1>Quem está assistindo?</h1>
-        </header>
+<body class="dark-mode">
 
-        <section class="profiles" aria-label="Perfis de usuário">
-            <article class="profile" role="button" tabindex="0" aria-label="Perfil de Gustavo">
-                <figure>
-                    <img src="/assets/perfil1.jpg" alt="Um cachorro vestido com uma blusa de capô e fones de ouvido, sentado em frente a um computador com múltiplas telas, um ambiente de trabalho tecnológico.">
-                    <figcaption>Gustavo</figcaption>
-                </figure>
-            </article>
+    <!-- TELA DE PERFIS -->
+    <div id="profilesScreen">
+        <main>
+            <header>
+                <h1>Quem está assistindo?</h1>
+            </header>
 
-            <article class="profile" role="button" tabindex="0" aria-label="Perfil de Rafaela">
-                <figure>
-                    <img src="/assets/perfil2.jpg" alt="Um cachorro com um capô e um gorro, sentado no sofá, em uma postura relaxada, com um olhar sério.">
-                    <figcaption>Rafaela</figcaption>
-                </figure>
-            </article>
+            <section class="profiles" aria-label="Perfis de usuário">
+                <article class="profile" role="button" tabindex="0" aria-label="Perfil de Gustavo" onclick="enterProfile('gustavo')">
+                    <figure>
+                        <img src="assets/perfil1.jpg" alt="Perfil de Gustavo">
+                        <figcaption>Gustavo</figcaption>
+                    </figure>
+                </article>
 
-            <article class="profile" role="button" tabindex="0" aria-label="Perfil de Davi">
-                <figure>
-                    <img src="/assets/perfil3.jpg" alt="Um homem com uma aparência séria, fumando um cigarro, com um estilo visual em preto e branco, em um ambiente urbano.">
-                    <figcaption>Davi</figcaption>
-                </figure>
-            </article>
+                <article class="profile" role="button" tabindex="0" aria-label="Perfil de Rafaela" onclick="enterProfile('rafaela')">
+                    <figure>
+                        <img src="assets/perfil2.jpg" alt="Perfil de Rafaela">
+                        <figcaption>Rafaela</figcaption>
+                    </figure>
+                </article>
 
-            <article class="profile" role="button" tabindex="0" aria-label="Perfil de Meg">
-                <figure>
-                    <img src="/assets/perfil4.jpg" alt="Um homem vestindo um terno antigo, com um chapéu clássico, com um olhar sério e postura formal.">
-                    <figcaption>Meg</figcaption>
-                </figure>
-            </article>
-        </section>
-    </main>
+                <article class="profile" role="button" tabindex="0" aria-label="Perfil de Davi" onclick="enterProfile('davi')">
+                    <figure>
+                        <img src="assets/perfil3.jpg" alt="Perfil de Davi">
+                        <figcaption>Davi</figcaption>
+                    </figure>
+                </article>
 
-    <button id="themeToggle" aria-label="Alternar modo claro e escuro">Modo claro</button>
-    <script src="/assets/theme.js"></script>
+                <article class="profile" role="button" tabindex="0" aria-label="Perfil de Meg" onclick="enterProfile('meg')">
+                    <figure>
+                        <img src="assets/perfil4.jpg" alt="Perfil de Meg">
+                        <figcaption>Meg</figcaption>
+                    </figure>
+                </article>
+            </section>
+        </main>
+    </div>
+
+    <!-- TELA DE CATÁLOGO -->
+    <div id="catalogScreen" class="hidden">
+
+        <!-- Navbar -->
+        <nav class="navbar">
+            <div class="navbar-left">
+                <span class="netflix-logo">NETFLIX</span>
+                <ul class="nav-links">
+                    <li>Início</li>
+                    <li>Séries</li>
+                    <li>Filmes</li>
+                    <li>Novidades</li>
+                </ul>
+            </div>
+            <div class="navbar-right">
+                <span id="currentProfileName" class="profile-name-nav"></span>
+                <img id="currentProfileImg" class="profile-img-nav" src="" alt="">
+                <button id="backBtn" onclick="backToProfiles()">Trocar perfil</button>
+            </div>
+        </nav>
+
+        <!-- Banner -->
+        <div class="banner" id="bannerSection">
+            <div class="banner-content">
+                <h2 id="bannerTitle">Carregando...</h2>
+                <p id="bannerDesc"></p>
+                <div class="banner-buttons">
+                    <button class="btn-play" id="bannerPlayBtn">▶ Assistir</button>
+                    <button class="btn-info">ℹ Mais informações</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Categorias -->
+        <div class="catalog" id="catalogContent">
+            <p class="loading-text">Carregando catálogo...</p>
+        </div>
+
+    </div>
+
+    <!-- PLAYER DE TRAILER (sobe de baixo estilo Netflix) -->
+    <div id="trailerPlayer" class="trailer-player hidden">
+        <div class="trailer-header">
+            <span class="trailer-title">Trailer</span>
+            <button class="trailer-close" onclick="closeTrailer()">✕ Fechar</button>
+        </div>
+        <div class="trailer-body">
+            <iframe
+                id="trailerFrame"
+                src=""
+                frameborder="0"
+                allow="autoplay; fullscreen"
+                allowfullscreen
+            ></iframe>
+        </div>
+    </div>
+
+    <button id="themeToggle" aria-label="Alternar modo claro e escuro">☀</button>
+
+    <script src="assets/theme.js"></script>
+    <script src="assets/catalog.js"></script>
 </body>
 </html>

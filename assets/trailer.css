@@ -1,0 +1,97 @@
+/* ===== PLAYER DE TRAILER ESTILO NETFLIX ===== */
+
+/* Player fixo na parte inferior da tela */
+.trailer-player {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    background: #141414;
+    border-top: 2px solid #e50914;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 -8px 32px rgba(0,0,0,0.8);
+}
+
+/* Animação de subir */
+.trailer-player.slide-up {
+    animation: slideUp 0.4s ease forwards;
+}
+
+/* Animação de descer */
+.trailer-player.slide-down {
+    animation: slideDown 0.4s ease forwards;
+}
+
+@keyframes slideUp {
+    from { transform: translateY(100%); opacity: 0; }
+    to   { transform: translateY(0);    opacity: 1; }
+}
+
+@keyframes slideDown {
+    from { transform: translateY(0);    opacity: 1; }
+    to   { transform: translateY(100%); opacity: 0; }
+}
+
+/* Cabeçalho do player */
+.trailer-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 24px;
+    background: #0d0d0d;
+}
+
+.trailer-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.trailer-close {
+    background: transparent;
+    border: 1px solid #555;
+    color: #ccc;
+    padding: 6px 16px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: border-color 0.2s, color 0.2s;
+}
+
+.trailer-close:hover {
+    border-color: #e50914;
+    color: #e50914;
+}
+
+/* Área do iframe */
+.trailer-body {
+    flex: 1;
+    background: #000;
+}
+
+.trailer-body iframe {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .trailer-player {
+        height: 50vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .trailer-player {
+        height: 40vh;
+    }
+
+    .trailer-header {
+        padding: 8px 16px;
+    }
+}
