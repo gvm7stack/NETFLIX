@@ -65,4 +65,4 @@ Gustavo Vieira De Matos
 
 ---
 
-*Desenvolvido com ❤️ durante a Imersão Front-End Alura.*
+*Desenvolvido durante a Imersão Front-End Alura.*
